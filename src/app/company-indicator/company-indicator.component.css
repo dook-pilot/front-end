@@ -1,0 +1,18 @@
+
+
+.card-header {
+    width: 100% !important;
+
+}
+div#NumberIrregulars {
+position: relative;
+}
+p.companies{
+    position: absolute !important;
+    top:0 !important;
+}
+.ngx-datatable.scroll-horz .datatable-body {
+    width:100% !important;
+  }
+
+

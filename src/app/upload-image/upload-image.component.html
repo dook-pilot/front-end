@@ -1,0 +1,181 @@
+<div class="container-fluid p-0">
+  <form id="file-upload-form" class="uploader">
+    <!-- <input id="file-upload" type="file" name="fileUpload" accept="image/*" /> -->
+    <input
+      id="file-upload"
+      type="file"
+      accept="image/*"
+      (change)="onFileChange($event)"
+      style="display: none"
+    />
+
+    <label for="file-upload" id="file-drag">
+      <img [src]="imageSrc" id="file-image" *ngIf="imageSrc" />
+
+      <div id="start">
+        <i class="fa fa-download" aria-hidden="true"></i>
+        <div>Select a file or drag here</div>
+        <div id="notimage" class="hidden">Please select an image</div>
+        <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+      </div>
+    </label>
+    <div class="w-100 text-end">
+      <button class="btn btn-primary" type="submit" (click)="submit()">
+        Submit
+      </button>
+    </div>
+  </form>
+  <table
+    class="table table-responsive table-bordered liscenceNoTable"
+    *ngIf="showTable"
+  >
+    <thead>
+      <!-- <tr> -->
+      <!-- <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th> -->
+      <tr>
+        <th colspan="4">
+          <h3>Car Details</h3>
+        </th>
+      </tr>
+
+      <!-- </tr> -->
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="fw">Company Name</td>
+        <td>
+          {{ companyName }}
+        </td>
+      </tr>
+      <tr>
+        <td class="fw">KVK</td>
+        <td>{{ kyk }}</td>
+      </tr>
+      <tr>
+        <td class="fw">BOVAGE</td>
+        <td>{{ bovag }}</td>
+      </tr>
+      <tr>
+        <td class="fw">Multiples Companies at same location</td>
+        <td>{{ duplicate_found }}</td>
+      </tr>
+      <tr>
+        <td class="fw">Profile Rating</td>
+        <td>{{ ratings }}</td>
+      </tr>
+      <tr>
+        <td class="fw">Liscence Number</td>
+        <td>
+          <ul>
+            <li *ngFor="let ln of liscence_number; let indexOfelement = index">
+              <a
+                class="liscence-no"
+                data-toggle="modal"
+                data-target="#liscenceModal"
+                (click)="openLiscenceNoDetails(ln)"
+                >{{ ln }}</a
+              >
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div
+  class="modal fade bd-example-modal-lg"
+  id="liscenceModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="liscenceModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="liscenceModalLabel">
+          Liscence Number <strong>{{ targetedLiscenceNo }}</strong> Details
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="page-content page-container" id="page-content">
+          <ng-container *ngIf="categories.length > 0; else no_Data">
+
+          <div class="padding">
+            <div class="row container d-flex">
+              <div class="col-sm-12">
+                <tabset>
+                  <tab
+                    *ngFor="let tabz of categories; let i = index"
+                    [heading]="tabz.title"
+                    [active]="tabz.active"
+                    (select)="tabz.active = true"
+                    (deselect)="tabz.active = false"
+                  >
+                    <div class="tab-content mb-4" style="margin-top: 25px">
+                      <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                        <accordion [closeOthers]="true">
+                          <accordion-group
+                            *ngFor="let section of tabz.sections"
+                            #groupval
+                            style="margin-top: 5px"
+                          >
+                            <div accordion-heading style="width: 100%">
+                              {{ section.title }}
+                              <i
+                                class="pull-right float-xs-right fa"
+                                [ngClass]="{
+                                  'fa-angle-down': groupval?.isOpen,
+                                  'fa-angle-up': !groupval?.isOpen
+                                }"
+                              ></i>
+                            </div>
+                            <div>
+                              <div class="panel-body">
+                                <table class="table">
+                                  <tbody>
+                                    <tr *ngFor="let dat of section.data">
+                                      <td>{{ dat.col1 }}</td>
+                                      <td>{{ dat.col2 }}</td>
+                                      <td>{{ dat.col3 }}</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </accordion-group>
+                        </accordion>
+                      </div>
+                    </div>
+                  </tab>
+                </tabset>
+              </div>
+            </div>
+          </div>
+          </ng-container>
+          <ng-template #no_Data>
+            <p class="text-center" *ngIf="isDataNotFound">No data found against Liscence Number {{targetedLiscenceNo}}</p>
+          </ng-template>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

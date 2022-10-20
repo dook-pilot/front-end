@@ -1,0 +1,258 @@
+<div class="logo">
+  <a [routerLink]="['/irregularitiesOnMap']">
+    <div class="row col-12">
+      <div class="col-2 p-0">
+        <div>
+          <img
+            src="/assets/img/logo.svg"
+            style="width: 100%; position: absolute; margin: 4px"
+          />
+        </div>
+      </div>
+      <div class="col-10 p-0">
+        <p style="color: black; font-size: 0.85rem">
+          DOOK Ondermijning Autobranche Den Haag Pilot
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+<!-- <div class="logo">
+    <a href="https://www.creative-tim.com" class="simple-text">
+        <div class="logo-img">
+            <img src="/assets/img/angular2-logo-red.png"/>
+        </div>
+        Creative Tim
+    </a>
+  </div> -->
+<div class="sidebar-wrapper">
+  <ul class="nav">
+    <li routerLinkActive="active">
+      <div id="main">
+        <div class="container">
+          <div class="accordion" id="faq">
+            <div
+              class="Categoriesstyled__CategoryContainer-sc-aha1ir-1 bgiybS"
+              id="faqhead1"
+            >
+              <div class="heading">
+                <a
+                  class="btn btn-header-link"
+                  style="width: 100%; padding: 0px"
+                  (click)="showCompanyIndicator = !showCompanyIndicator"
+                >
+                  <div class="row col-12 col-sm-12 col-md-12 p-0 m-0">
+                    <div class="col-12 col-sm-12 col-md-2 p-0 text-left">
+                      <div class="img-icon">
+                        <img
+                          src="/assets/img/beoogd.svg"
+                          class="d-inline-block"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-9 text-left p-0">
+                      <p
+                        class="d-inline-block align-middle"
+                        style="font-weight: bold; font-size: 13px"
+                      >
+                        Company Indicator
+                      </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-1 p-0">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        class="IconFlippingChevron-sc-ccos5v-0 figZSd"
+                      >
+                        <path
+                          d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                id="faq1"
+                class="collapse"
+                [ngClass]="{
+                  show: showCompanyIndicator,
+                  collapse: !showCompanyIndicator
+                }"
+              >
+                <div id="rp70cj" class="collapseContent">
+                  <!-- <p>Er is geen éénduidige definitie van wat een 'bedrijventerrein' is. De focus van de Datavoorziening Onregelmatigheden op de Kaart is op bestuurlijke handhaving van vergunningen op bedrijventerreinen.</p>
+                  <h3 class="headingSmall">Beschikbare kaartlagen:</h3> -->
+                  <ul class="radioUL">
+                    <li>
+                      <label for="html" class="radioLable">Car Dealer</label>
+                      <input
+                        type="radio"
+                        id="html"
+                        name="fav_language"
+                        value="car_dealer"
+                        (change)="selectValue($event, 'CompanyIndicator')"
+                      />
+                    </li>
+                    <li>
+                      <label for="html" class="radioLable">Car Repair</label>
+                      <input
+                        type="radio"
+                        id="html"
+                        name="fav_language"
+                        value="car_repair"
+                        (change)="selectValue($event, 'CompanyIndicator')"
+                      />
+                    </li>
+                    <li>
+                      <label for="html" class="radioLable">Car Rental</label>
+                      <input
+                        type="radio"
+                        id="html"
+                        name="fav_language"
+                        value="car_rental"
+                        (change)="selectValue($event, 'CompanyIndicator')"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="Categoriesstyled__CategoryContainer-sc-aha1ir-1 bgiybS">
+              <div class="heading" id="faqhead2">
+                <a
+                  class="btn btn-header-link p-0"
+                  (click)="showIrregularities = !showIrregularities"
+                  style="width: 100%"
+                >
+                  <div class="row col-12 col-sm-12 col-md-12 p-0 m-0">
+                    <div class="col-12 col-sm-12 col-md-2 p-0 text-left">
+                      <div class="img-icon">
+                        <img
+                          src="/assets/img/beoogd.svg"
+                          class="d-inline-block"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-9 text-left p-0">
+                      <p
+                        class="d-inline-block align-middle"
+                        style="font-weight: bold; font-size: 13px"
+                      >
+                        Irregularities on the map
+                      </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-1 p-0">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        class="IconFlippingChevron-sc-ccos5v-0 figZSd"
+                      >
+                        <path
+                          d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                id="faq2"
+                class="collapse"
+                [ngClass]="{
+                  show: showIrregularities,
+                  collapse: !showIrregularities
+                }"
+              >
+                <div id="rp70cj" class="collapseContent">
+                  <!-- <p>Er is geen éénduidige definitie van wat een 'bedrijventerrein' is. De focus van de Datavoorziening Onregelmatigheden op de Kaart is op bestuurlijke handhaving van vergunningen op bedrijventerreinen.</p>
+                <h3 class="headingSmall">Beschikbare kaartlagen:</h3> -->
+                  <ul class="radioUL">
+                    <li>
+                      <label for="car" class="radioLable">Car Dealer</label>
+                      <input
+                        type="radio"
+                        id="car"
+                        name="fav_language"
+                        value="car_dealer"
+                        (change)="selectValue($event, 'irregularitiesOnMap')"
+                      />
+                    </li>
+                    <li>
+                      <label for="car" class="radioLable">Car Repair</label>
+                      <input
+                        type="radio"
+                        id="car"
+                        name="fav_language"
+                        value="car_repair"
+                        (change)="selectValue($event, 'irregularitiesOnMap')"
+                      />
+                    </li>
+                    <li>
+                      <label for="car" class="radioLable">Car Rental</label>
+                      <input
+                        type="radio"
+                        id="car"
+                        name="fav_language"
+                        value="car_rental"
+                        (change)="selectValue($event, 'irregularitiesOnMap')"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="Categoriesstyled__CategoryContainer-sc-aha1ir-1 bgiybS">
+              <div
+                class="heading"
+                id="faqhead2"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="rp70cj"
+                aria-label="Bedrijventerreinen"
+                role="button"
+              >
+                <a
+                  class="btn btn-header-link p-0"
+                  [routerLink]="['/vehicleInformation']"
+                  style="width: 100%"
+                >
+                  <div class="row col-12 col-sm-12 col-md-12 p-0 m-0">
+                    <div class="col-12 col-sm-12 col-md-2 p-0 text-left">
+                      <div class="img-icon">
+                        <img
+                          src="/assets/img/beoogd.svg"
+                          class="d-inline-block"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-9 text-left p-0">
+                      <p
+                        class="d-inline-block align-middle"
+                        style="font-weight: bold; font-size: 13px"
+                      >
+                        Vehicle Information
+                      </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-1 p-0">
+                      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="IconFlippingChevron-sc-ccos5v-0 figZSd">
+                    <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path>
+                </svg> -->
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <!-- <li _ngcontent-auw-c2="" routerlinkactive="active" class="active-pro nav-item"><a _ngcontent-auw-c2="" class="nav-link" href="#/upgrade"><i _ngcontent-auw-c2="" class="material-icons">unarchive</i><p _ngcontent-auw-c2="">Upgrade to PRO</p></a></li> -->
+  </ul>
+</div>

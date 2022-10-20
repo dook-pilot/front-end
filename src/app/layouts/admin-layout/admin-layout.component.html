@@ -1,0 +1,22 @@
+<div class="wrapper" >
+
+    <div class="sidebar" data-color="danger" data-background-color="white" *ngIf="isShowSidebar">
+        <app-sidebar ></app-sidebar>
+        <div class="sidebar-background" [ngStyle]="{'width':!isShow ? '0%' : 'auto'}" ></div>
+    </div>
+    <div class="main-panel " [ngClass]="!isShow ? 'full_width' : 'half_width'">
+        <app-navbar *ngIf="isShowNavbar"></app-navbar>
+        <div class="showToggle" *ngIf="isShowToggle">
+            <a class="toggle-btn"  (click)="toggleClick()"> <i class="fa fa-arrow-left" aria-hidden="true" *ngIf="isShow"></i>
+                <i class="fa fa-arrow-right" aria-hidden="true" *ngIf="!isShow"></i>
+            </a>
+        </div>
+        
+        <!-- <button ejs-button id="toggle" class="e-btn e-info" (click)="toggleClick()">Toggle Sidebar</button> -->
+        <router-outlet></router-outlet>
+        
+    </div>
+
+</div>
+<!-- Buy-Modal-angular -->
+

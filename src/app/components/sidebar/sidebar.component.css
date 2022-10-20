@@ -1,0 +1,139 @@
+#main {
+  margin: 50px 0;
+}
+
+#main #faq .card {
+  margin-bottom: 30px;
+  border: 0;
+}
+
+#main #faq .card .card-header .btn-header-link {
+  display: block;
+  text-align: left;
+  background: #fff;
+  color: #222;
+  padding: 20px;
+  margin: 0px;
+}
+
+#main #faq .card .card-header .btn-header-link:after {
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  float: right;
+}
+
+#main #faq .card .card-header .btn-header-link.collapsed {
+  background: #a541bb;
+  color: #fff;
+}
+
+#main #faq .card .card-header .btn-header-link.collapsed:after {
+  content: "\f106";
+}
+
+#main #faq .card .collapsing {
+  line-height: 30px;
+}
+
+#main #faq .card .collapse {
+  border: 0;
+}
+
+#main #faq .card .collapse.show {
+  line-height: 30px;
+  color: #222;
+}
+.radioUL {
+  padding: 0px;
+}
+.radioUL li {
+  list-style: none;
+  border: 2px solid #beb7b7;
+  padding: 0.2rem 1rem;
+  background-color: rgb(245, 245, 245);
+  border-color: rgb(189, 189, 189);
+  border-width: 1px 1px 0px;
+  border-style: solid;
+  -webkit-box-pack: start;
+  color: rgb(66, 66, 66);
+}
+.radioUL li:last-child {
+  border-bottom-width: 1px;
+}
+.radioLable {
+  width: 80%;
+}
+input[type="radio"] {
+  width: 2em;
+  height: 1rem;
+  accent-color: green;
+  vertical-align: middle;
+}
+.btn-header {
+  display: block;
+  text-align: left;
+  background: #fff;
+  color: #222 !important;
+  padding: 20px !important;
+  margin: 0px !important;
+}
+
+.bgiybS {
+  border-color: rgb(189, 189, 189);
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+.bgiybS > .heading {
+  padding: 0px;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  flex: 1 1 0%;
+  height: 1.5rem;
+  color: rgb(33, 33, 33);
+  margin: 0px !important;
+}
+.figZSd {
+  fill: rgb(33, 33, 33);
+  transition: all 300ms ease-in-out 0s;
+  flex-shrink: 0;
+}
+div#faq1 {
+  padding-bottom: 10px !important;
+}
+.btn:active:hover,
+.btn:active:focus {
+  background-color: #fff;
+  border: none;
+  box-shadow: none;
+}
+
+.img-icon {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+.inside-img {
+  position: absolute;
+  width: 19px;
+  height: auto;
+}
+.m-0 {
+  margin: 0px !important;
+}

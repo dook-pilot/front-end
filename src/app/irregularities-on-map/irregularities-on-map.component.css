@@ -1,0 +1,58 @@
+/* ::ng-deep canvas.mapboxgl-canvas {
+    width:50% !important;
+}
+
+::ng-deep .js-plotly-plot .plotly .main-svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    width:50% !important;
+
+}
+::ng-deep .mapboxgl-canvas-container.mapboxgl-interactive.mapboxgl-touch-drag-pan.mapboxgl-touch-zoom-rotate
+{
+    width:50% !important;
+
+} */
+.map {
+    grid-area: 1 / 2 / auto / span 1;
+    align-self: stretch;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    transition: width 550ms ease-in-out 0s;
+}
+.mapboxgl-map, .maplibregl-map {
+    -webkit-tap-highlight-color: rgb(0 0 0/0);
+    font: 12px/20px Helvetica Neue,Arial,Helvetica,sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+div#NumberIrregulars {
+    height: auto;
+    position: absolute;
+    z-index: 8;
+    bottom: 0px;
+    background: #b1b0af;
+    opacity: 0.7;
+
+}
+ :host ::ng-deep .js-plotly-plot .plotly .mapboxgl-map {
+    min-height: 100vh !important;
+    min-width: 100% !important;
+    width: 100% !important;
+
+}
+:host ::ng-deep canvas.mapboxgl-canvas {
+    min-height: 100vh !important;
+    min-width: 100% !important;
+
+} 
+
+:host ::ng-deep .js-plotly-plot .plotly .user-select-none {
+    max-width: 100% !important;
+    min-width: 100% !important;
+    width: 100% !important;
+
+}
